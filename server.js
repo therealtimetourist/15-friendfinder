@@ -88,11 +88,11 @@ var friends = [
 // set routes
 // index (home) page
 app.get("./", function(req, res) {
-  res.sendFile(path.join(__dirname, "./app/public/home.html"));
+  res.sendFile(path.join(__dirname, "./home.html"));
 });
 // survey page
 app.get("./survey", function(req, res) {
-  res.sendFile(path.join(__dirname, "./app/public/survey.html"));
+  res.sendFile(path.join(__dirname, "./survey.html"));
 });
 // get API friends list (the raw data)
 app.get("./api/friends", function(req, res) {
