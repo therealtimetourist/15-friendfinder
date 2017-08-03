@@ -6,7 +6,7 @@ var path = require("path");
 // set Express
 var app = express();
 // set port (process.env.PORT if live/3000 if localhost)
-var port = process.env.port || 3000;
+var port = process.env.PORT || 3000;
 
 // set data parsing
 app.use(bodyParser.json());
