@@ -61,9 +61,31 @@ $("#submit").on("click", function(){
 function getFriendMatch(data){
 	var friendName = "";
 	var friendPhoto = "";
+	var userToMatch = [];
+	// get last user to enter data's scores
+	for (var i = 0; i < 10; i++){
+		userToMatch.push(parseInt(data[data.length-1].scores[i]));
+	}
+	console.log(userToMatch);
+	// loop through  all users except for last user entered (userToMatch)
+	for(var i = 0; i < (data.length - 1); i++){
+		// set a datascore variable
+		var datascore = 0;
+		// loop through scores for each user
+		for (var j = 0; j < 10 ; j++){
+			// compare all users scores to last user entered (userToMatch)
+			// add up scores
+			datascore += Math.abs( userToMatch[j] - data[i].scores[j] );
+		}
+		console.log("datascore " + i + ": " + datascore);
+		// add a key/value to the object for the score
+		data[i].differenceScore = datascore;
+		console.log(data[i]);
+	// sort the users by lowest differences score
+		
+	}
 
-	
-	
+
 	var a = [{"name": friendName, "photo": friendPhoto}];
 	return a;
 }
