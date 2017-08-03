@@ -81,11 +81,6 @@ function getFriendMatch(data){
 		console.log("datascore " + i + ": " + datascore);
 		// add a key/value to the object for the score
 		data[i].differenceScore = datascore;
-
-		// sort the users by lowest differences score
-		//if(data[i].differenceScore < lowestScore){
-
-		//}
 	}
 
 	 // There's no real number bigger than plus Infinity
@@ -99,7 +94,6 @@ function getFriendMatch(data){
 	    	recNum = i;
 	    } 
 	}
-	console.log("lowestScore: " + data[recNum].name);
 
 	var a = [{"name": data[recNum].name, "photo": data[recNum].photo}];
 	return a;
