@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 // set absolute pathing
-app.use(express.static(__dirname + './app/public'));
+app.use(express.static(__dirname + '/app/public'));
 
 // set array of friends. Information from survey form is appended
 // with default data added
@@ -87,19 +87,19 @@ var friends = [
 
 // set routes
 // index (home) page
-app.get("./", function(req, res) {
+app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "/home.html"));
 });
 // survey page
-app.get("./survey", function(req, res) {
+app.get("/survey", function(req, res) {
   res.sendFile(path.join(__dirname, "/survey.html"));
 });
 // get API friends list (the raw data)
-app.get("./api/friends", function(req, res) {
+app.get("/api/friends", function(req, res) {
   res.json(friends);
 });
 // post data to the object array
-app.post("./api/friends", function(req, res) {
+app.post("/api/friends", function(req, res) {
 	friends.push(req.body);
 	res.json(friends);
 });
