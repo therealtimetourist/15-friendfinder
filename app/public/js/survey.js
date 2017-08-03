@@ -59,14 +59,15 @@ $("#submit").on("click", function(){
 });
 
 function getFriendMatch(data){
-	var friendName = "";
-	var friendPhoto = "";
+	//var friendName = "";
+	//var friendPhoto = "";
 	var userToMatch = [];
+	//var lowestScore = 0;
 	// get last user to enter data's scores
 	for (var i = 0; i < 10; i++){
 		userToMatch.push(parseInt(data[data.length-1].scores[i]));
 	}
-	console.log(userToMatch);
+	
 	// loop through  all users except for last user entered (userToMatch)
 	for(var i = 0; i < (data.length - 1); i++){
 		// set a datascore variable
@@ -80,12 +81,26 @@ function getFriendMatch(data){
 		console.log("datascore " + i + ": " + datascore);
 		// add a key/value to the object for the score
 		data[i].differenceScore = datascore;
-		console.log(data[i]);
-	// sort the users by lowest differences score
-		
+
+		// sort the users by lowest differences score
+		//if(data[i].differenceScore < lowestScore){
+
+		//}
 	}
 
+	 // There's no real number bigger than plus Infinity
+	var lowest = Number.POSITIVE_INFINITY;
+	var tmp;
+	var recNum;
+	for (var i = data.length - 1; i >= 0; i--) {
+	    tmp = data[i].differenceScore;
+	    if (tmp < lowest){
+	    	lowest = tmp;
+	    	recNum = i;
+	    } 
+	}
+	console.log("lowestScore: " + data[recNum].name);
 
-	var a = [{"name": friendName, "photo": friendPhoto}];
+	var a = [{"name": data[recNum].name, "photo": data[recNum].photo}];
 	return a;
 }
