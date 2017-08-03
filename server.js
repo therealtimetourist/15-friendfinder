@@ -37,7 +37,7 @@ var friends = [
 	},
 	{
 		"name": "Jeremy Johansen",
-		"photo": "http://i.huffpost.com/gadgets/slideshows/10591/slide_10591_139838_large.jpg",
+		"photo": "https://i.huffpost.com/gadgets/slideshows/10591/slide_10591_139838_large.jpg",
 		"scores": [
 			"4",
 			"5",
@@ -53,7 +53,7 @@ var friends = [
 	},
 	{
 		"name": "Scooter Petersen",
-		"photo": "http://www.teamjimmyjoe.com/wp-content/uploads/2015/09/awkward-family-photos-portrait-hawaiian-shirt.jpg",
+		"photo": "https://www.teamjimmyjoe.com/wp-content/uploads/2015/09/awkward-family-photos-portrait-hawaiian-shirt.jpg",
 		"scores": [
 			"5",
 			"5",
