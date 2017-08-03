@@ -87,19 +87,19 @@ var friends = [
 
 // set routes
 // index (home) page
-app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "app/public/home.html"));
+app.get("./", function(req, res) {
+  res.sendFile(path.join(__dirname, "./app/public/home.html"));
 });
 // survey page
-app.get("/survey", function(req, res) {
-  res.sendFile(path.join(__dirname, "app/public/survey.html"));
+app.get("./survey", function(req, res) {
+  res.sendFile(path.join(__dirname, "./app/public/survey.html"));
 });
 // get API friends list (the raw data)
-app.get("/api/friends", function(req, res) {
+app.get("./api/friends", function(req, res) {
   res.json(friends);
 });
 // post data to the object array
-app.post("/api/friends", function(req, res) {
+app.post("./api/friends", function(req, res) {
 	friends.push(req.body);
 	res.json(friends);
 });
