@@ -41,7 +41,7 @@ $("#submit").on("click", function(){
     	var currentURL = window.location.origin;
 
     	// AJAX post data to friends API. 
-    	$.post(currentURL + "./api/friends", userData, function(data){
+    	$.post(currentURL + "/api/friends", userData, function(data){
     		var friendMatch = getFriendMatch(data);
     		//console.log("survey.data: " + data);
     		// get result from AJAX post with best match name/photo
