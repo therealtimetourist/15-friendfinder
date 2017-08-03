@@ -37,20 +37,19 @@ $("#submit").on("click", function(){
     		scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(), ]
     	}
 
-
     	// Grab the URL of the website
     	var currentURL = window.location.origin;
 
     	// AJAX post data to friends API. 
     	$.post(currentURL + "/api/friends", userData, function(data){
-    		console.log(data);
-    		alert(data[0].name);
+    		var friendMatch = getFriendMatch(data);
+    		//console.log("survey.data: " + data);
     		// get result from AJAX post with best match name/photo
-    		//$("#matchName").text(data.name);
-    		//$('#matchImg').attr("src", data.photo);
+    		$("#matchName").text(friendMatch[0].name);
+    		$('#matchImg').attr("src", friendMatch[0].photo);
 
 	    	// Show the modal with the best match 
-	    	//$("#resultsModal").modal('toggle');
+	    	$("#resultsModal").modal('toggle');
 
     	});
 	} else{
@@ -58,3 +57,13 @@ $("#submit").on("click", function(){
 	}
 	return false;
 });
+
+function getFriendMatch(data){
+	var friendName = "";
+	var friendPhoto = "";
+
+	
+	
+	var a = [{"name": friendName, "photo": friendPhoto}];
+	return a;
+}
