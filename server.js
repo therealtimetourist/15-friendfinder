@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 // set absolute pathing
-app.use(express.static(__dirname + '/app/public'));
+app.use(express.static(__dirname + './app/public'));
 
 // set array of friends. Information from survey form is appended
 // with default data added
