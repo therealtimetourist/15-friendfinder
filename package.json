@@ -1,0 +1,26 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "Node and Express Coding Example of a dating application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/therealtimetourist/friendfinder.git"
+  },
+  "keywords": [
+    "Dating",
+    "Application",
+    "match",
+    "Node",
+    "Express"
+  ],
+  "author": "Don Bedwell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/therealtimetourist/friendfinder/issues"
+  },
+  "homepage": "https://github.com/therealtimetourist/friendfinder#readme"
+}
