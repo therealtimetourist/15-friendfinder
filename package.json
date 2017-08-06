@@ -4,8 +4,7 @@
   "description": "Node and Express Coding Example of a dating application",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -23,10 +22,5 @@
   "bugs": {
     "url": "https://github.com/therealtimetourist/friendfinder/issues"
   },
-  "homepage": "https://github.com/therealtimetourist/friendfinder#readme",
-  "dependencies": {
-    "body-parser": "^1.17.2",
-    "express": "^4.15.3",
-    "path": "^0.12.7"
-  }
+  "homepage": "https://github.com/therealtimetourist/friendfinder#readme"
 }

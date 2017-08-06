@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 // set absolute pathing
-app.use(express.static(__dirname + './app/public'));
+app.use(express.static(__dirname + '/app/public'));
 
 // set array of friends. Information from survey form is appended
 // with default data added
@@ -37,7 +37,7 @@ var friends = [
 	},
 	{
 		"name": "Jeremy Johansen",
-		"photo": "https://i.huffpost.com/gadgets/slideshows/10591/slide_10591_139838_large.jpg",
+		"photo": "http://i.huffpost.com/gadgets/slideshows/10591/slide_10591_139838_large.jpg",
 		"scores": [
 			"4",
 			"5",
@@ -53,7 +53,7 @@ var friends = [
 	},
 	{
 		"name": "Scooter Petersen",
-		"photo": "https://www.teamjimmyjoe.com/wp-content/uploads/2015/09/awkward-family-photos-portrait-hawaiian-shirt.jpg",
+		"photo": "http://www.teamjimmyjoe.com/wp-content/uploads/2015/09/awkward-family-photos-portrait-hawaiian-shirt.jpg",
 		"scores": [
 			"5",
 			"5",
@@ -88,11 +88,11 @@ var friends = [
 // set routes
 // index (home) page
 app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "./app/public/home.html"));
+  res.sendFile(path.join(__dirname, "app/public/home.html"));
 });
 // survey page
 app.get("/survey", function(req, res) {
-  res.sendFile(path.join(__dirname, "./app/public/survey.html"));
+  res.sendFile(path.join(__dirname, "app/public/survey.html"));
 });
 // get API friends list (the raw data)
 app.get("/api/friends", function(req, res) {
